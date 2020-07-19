@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <style>
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      th, td {
+  padding: 10px;
+}
+      </style>
+    <meta charset="UTF-8">
+    <title> Cellular </title>
+</head>
+<body>
+<h3> The total number of records with no cellular contact is :{{usercount}}</h3>
+<table class="center" style="width:600px">
+    <th style="text-align:left"> Job </th>
+    <th style="text-align:left"> Marital </th>
+    <th style="text-align:left"> Education</th>
+    <th style="text-align:left"> Balance</th>
+    <th style="text-align:left"> Contact </th>
+{% for user in users %}
+<tr>
+<td> {{user.job}}</td>
+<td> {{user.marital}}</td>
+<td> {{user.education}}</td>
+<td> {{user.balance}}</td>
+<td> {{user.contact}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+
+</body>
+
+</html>
