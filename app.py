@@ -30,5 +30,4 @@ def customized(start_age,end_age,marital):
     return render_template('query3.html',users = users, start_age=start_age, end_age=end_age,marital = marital )
 
 if __name__ == '__main__': 
-    app.run(debug=True)
-# host= '0.0.0.0', port = 3000
+    app.run(debug=True, host= '0.0.0.0', port = 3000 )
