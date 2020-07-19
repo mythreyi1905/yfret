@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+</head>
+<body>
+    <h1 style="text-align:center">YFret Programming Test</h1>
+    <h4><b> Creating a webservice that can handle the following requests and deploying it on a kubernetes cluster </b></h4>
+
+<p><b> 1. Show how many records that do not have "cellular" contact ? </b></p>
+<p> The total number of records falling under this category along with the records itself can be accessed, if you hit the URL in the address bar available at the time of accessing by appending "/query1" to it(URL/query1)  </p>
+<br>
+<p>For Example : https://285b19875611.ngrok.io/query1 </p>
+<br> 
+
+<p><b>2.Use "day" and "month" column values and find records which are after 15th October</b></p>
+<p> The records falling under this category can be accessed, if you hit the URL in the address bar available at the time of accessing by appending "/query2" to it(URL/query2) </p>
+<br>
+<p>For Example : https://285b19875611.ngrok.io/query2 </p>
+
+<br>
+
+<p><b>3.How many records having a specific marital status and between certain age group?
+    Example : start_age : 20, end_age: 50, marital_status = 'married'</b></p>
+<p>This is slightly tricky XD . Instead of adding one parameter to the URL, we will have to add 4 parameters.They are "/query3", "/start_age", "/end_age" and "/marital_status"(URL/query3/start_age/end_age/marital_status)</p>
+<br>
+<p>For Example: https://285b19875611.ngrok.io/query3/15/49/divorced  </p>
+<br><p>15-start_age : Integer value, the minimum age you want to specify</p>
+<p>49 - end_age : Integer value, the maximum age that you want to specify </p>
+<p>divorced - marital_status : Holds values "single" or "divorced" or "married"</p>
+<br>
+<p><b>Note : </b> You willl encounter a 404 error if you miss out on these parameters. (URL/query3 is not valid)</p>
+
+<h3 style="text-align:center"> The scripting of the webservice has been done using Python Flask +  MongoDB and has been deployed as a docker container orchestrated by kubernetes(minikube) </h3>
+<p>Git Hub Link to the source code : <a href= "https://github.com/mythreyi1905/yfret.git">Click Here</a> </p>
+<p>Docker Hub Link to the source image : <a href = " https://hub.docker.com/repository/docker/mythreyi1929/yfretproject">Click Here</a> </p>
+</body>
+</html>
